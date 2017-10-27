@@ -1,4 +1,5 @@
 # life-gallery
+Creating an interactive gallery for significant photos. 
 
 Technologies
 ------------
@@ -19,7 +20,7 @@ Requirements
 
 To Do:
 
-- [ ] Set up controller
+- [x] Set up controller
 - [ ] Find 6 pictures place in picture folder
 - [ ] Create an array with objects:
 ``
