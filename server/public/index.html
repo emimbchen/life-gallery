@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <script src="vendors/angular.min.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body ng-app = "myApp">
     <div ng-controller ="mainController as controller" >
-        {{5-2}}
-        <button class = "btn btn-danger" >Button</button>
+        <header class = "jumbotron"> <h1>Gallery of Things</h1></header>
+    <div class="container">
+    <div class ="col-md-4" ng-repeat="picture in controller.pictures">
+        <img ng-click="controller.showCap(picture)" style="width: 300px; height: auto;" ng-src= {{picture.picture}}>
+        <div class="centered" ng-hide="picture.hidden"><p>{{picture.caption}}</p></div>
+    </div>
+    </div>
     </div>
 </body>
 </html>
