@@ -17,6 +17,8 @@
     <div class ="col-md-4" ng-repeat="picture in controller.pictures">
         <img ng-click="controller.showCap(picture)" style="width: 300px; height: auto;" ng-src= {{picture.picture}}>
         <div class="centered" ng-hide="picture.hidden"><p>{{picture.caption}}</p></div>
+        <form ng-submit="controller.addComment(picture)" class="CommentBar"><input ng-model="picture.comment" type="text" placeholder="Comment"><button class="btn btn-primary">Submit</button><button class="btn btn-primary" ng-click="controller.likePhoto(picture)">Like {{picture.likes}}</button></form>
+        <p ng-repeat="comment in picture.comments track by $index">{{comment}}</p>
     </div>
     </div>
     </div>

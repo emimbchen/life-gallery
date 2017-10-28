@@ -22,24 +22,24 @@ To Do:
 
 - [x] Set up controller
 - [ ] Find 6 pictures place in picture folder
-- [ ] Create an array with objects:
+- [x] Create an array with objects:
 ``
 array = [{picture: relativeUrl, caption: captionForPic, likes: likes}];
 ``
-- [ ] ng-repeat through array and place pictures
-- [ ] create a ng-click that shows caption
-- [ ] create a like button 
-- [ ] add a function on click of button to add likes to objects
-- [ ] host on heroku
+- [x] ng-repeat through array and place pictures
+- [x] create a ng-click that shows caption
+- [x] create a like button 
+- [x] add a function on click of button to add likes to objects
+- [x] host on heroku
 
 Hard Mode:
-- [ ] add bootstrap to style
-- [ ] include view counter for each clicked image
+- [x] add bootstrap to style
+- [x] include view counter for each clicked image
 
 Pro Mode: 
 
-- [ ] create a form for comments on each photo
-- [ ] display comments for each photo
+- [x] create a form for comments on each photo
+- [x] display comments for each photo
 - [ ] create a show comments button
 - [ ] create Post route to add new pictures (relative route)
 - [ ] create get route to display new pictures ($http)
