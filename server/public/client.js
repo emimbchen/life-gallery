@@ -25,9 +25,10 @@ myApp.controller('mainController', function ($http) {
             hidden: true,
             comments: []
         };
+        console.log(newPic);
         controller.url = "";
         controller.caption = "";
-        addPicture();
+        addPicture(newPic);
     }
 
     function refreshPictures() {
