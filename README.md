@@ -21,7 +21,7 @@ Requirements
 To Do:
 
 - [x] Set up controller
-- [ ] Find 6 pictures place in picture folder
+- [x] Find 6 pictures place in picture folder
 - [x] Create an array with objects:
 ``
 array = [{picture: relativeUrl, caption: captionForPic, likes: likes}];
@@ -41,5 +41,5 @@ Pro Mode:
 - [x] create a form for comments on each photo
 - [x] display comments for each photo
 - [ ] create a show comments button
-- [ ] create Post route to add new pictures (relative route)
+- [x] create Post route to add new pictures (relative route)
 - [ ] create get route to display new pictures ($http)

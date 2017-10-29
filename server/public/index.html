@@ -14,6 +14,20 @@
     <div ng-controller ="mainController as controller" >
         <header class = "jumbotron"> <h1>Gallery of Things</h1></header>
     <div class="container">
+        <div class="newPhoto">
+            <h3>Post a new Photo!</h3>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Picture Url</label>
+                    <input type="text" ng-model="controller.url">
+                </div>
+                <div class="form-group">
+                    <label>Caption</label>
+                    <input type="text" ng-model="controller.caption">
+                    <button class="btn btn-primary" ng-click="controller.newPic(controller.url, controller.caption)">Submit</button>
+                </div>
+            </form>
+        </div>
     <div class ="col-md-4" ng-repeat="picture in controller.pictures">
         <img ng-click="controller.showCap(picture)" style="width: 300px; height: auto;" ng-src= {{picture.picture}}>
         <div class="centered" ng-hide="picture.hidden"><p>{{picture.caption}}</p></div>
