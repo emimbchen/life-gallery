@@ -12,24 +12,26 @@
 </head>
 <body ng-app = "myApp">
     <div ng-controller ="mainController as controller" >
-        <header class = "jumbotron"> <h1>Gallery of Things</h1></header>
     <div class="container">
+        <header class="jumbotron">
+            <h1>My Personal Facebook</h1>
+        </header>
         <div class="newPhoto">
             <h3>Post a new Photo!</h3>
             <form class="form-inline">
                 <div class="form-group">
-                    <label>Picture Url</label>
+                    <label>Picture Url: </label>
                     <input type="text" ng-model="controller.url">
                 </div>
                 <div class="form-group">
-                    <label>Caption</label>
+                    <label>Caption: </label>
                     <input type="text" ng-model="controller.caption">
                     <button class="btn btn-primary" ng-click="controller.newPic(controller.url, controller.caption)">Submit</button>
                 </div>
             </form>
         </div>
     <div class ="col-md-4" ng-repeat="picture in controller.pictures">
-        <img ng-click="controller.showCap(picture)" style="width: 300px; height: auto;" ng-src= {{picture.picture}}>
+        <img ng-click="controller.showCap(picture)" style="width: 330px; height: auto;" ng-src= {{picture.picture}}>
         <div class="centered" ng-hide="picture.hidden"><p>{{picture.caption}}</p></div>
         <form ng-submit="controller.addComment(picture)" class="CommentBar"><input ng-model="picture.comment" type="text" placeholder="Comment"><button class="btn btn-primary">Submit</button><button class="btn btn-primary" ng-click="controller.likePhoto(picture)">Like {{picture.likes}}</button></form>
         <p ng-repeat="comment in picture.comments track by $index">{{comment}}</p>
